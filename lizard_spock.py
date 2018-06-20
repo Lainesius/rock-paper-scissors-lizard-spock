@@ -2,14 +2,14 @@ import random
 
 SCORE_GOAL = 3
 
-POOL = ["stone", "scissors", "paper", "lizard", "spock"]
+POOL = ["rock", "paper", "scissors", "lizard", "spock"]
 
 WIN_CONDITIONS = {
-    "stone": {"scissors", "lizard"},
+    "rock": {"scissors", "lizard"},
     "scissors": {"paper", "lizard"},
-    "paper": {"stone", "spock"},
+    "paper": {"rock", "spock"},
     "lizard": {"paper", "spock"},
-    "spock": {"stone", "scissors"}
+    "spock": {"rock", "scissors"}
 }
 
 def game():
@@ -66,7 +66,7 @@ def get_valid_input():
         String that is guaranteed to be in the POOL
     """
     while True:
-        print("Make your choice: stone, scissors, paper, lizard or spock!")
+        print("Make your choice: rock, paper, scissors, lizard or spock!")
         player_choice = input()
         if not isinstance(player_choice, str):
             print("Invalid input, try again!")
