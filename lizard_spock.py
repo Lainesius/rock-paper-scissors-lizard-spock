@@ -68,9 +68,6 @@ def get_valid_input():
     while True:
         print("Make your choice: rock, paper, scissors, lizard or spock!")
         player_choice = input()
-        if not isinstance(player_choice, str):
-            print("Invalid input, try again!")
-            continue
         player_choice = player_choice.lower()
         if player_choice not in POOL:
             print("Invalid input, try again!")
